@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='utf-8' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.8/index.global.min.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                /*initialView: 'resourceTimelineWeek'*/
+            });
+            calendar.render();
+        });
+
+    </script>
+</head>
+
+<body>
+<div id="add-events">
+    <button id="add">הוספת אירוע</button>
+    <input class="hidden title" name="title" placeholder="title" type="text"/>
+    <input class="hidden start" name="start" placeholder="start event" type="date"/>
+    <button class="hidden" id="post">הוסף</button>
+    <button class="hidden close">X</button>
+</div>
+
+<div id="delete-event">
+    <button id="delete">מחיקת אירוע</button>
+    <select id="events-list" class="hidden ">בחר מתוך הרשימה אירוע למחיקה</select>
+    
+    <button class="hidden " id="del">מחק</button>
+    <button class="hidden  close-del">X</button>
+</div>
+
+<div id="update-event">
+    <button id="update">עידכון אירוע</button>
+    <select id="events-list-update" class="hidden">
+        <option>בחר מתוך הרשימה אירוע לעידכון</option>
+    </select>
+    
+    <input class="hidden up-title" name="update-title" placeholder="title" type="text">
+    <input class="hidden up-date" name="update-date" placeholder="date" type="date">
+    <button class="h3-special" id="up">עדכן</button>
+    <button class="hidden  close-up">X</button>
+</div>
+
+    <div id='calendar'></div>
+
+    <script src="js.js"></script>
+    <script>
+       
+
+    </script>
+</body>
+
+</html>

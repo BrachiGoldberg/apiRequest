@@ -1,0 +1,6 @@
+.hidden ,.hidden2,.hidden3,.h3-special{
+    display: none;
+}
+.hidden.open,.hidden2.open,.hidden3.open{
+    display: block;
+}
